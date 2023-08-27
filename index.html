@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ripser++</h1>
+
+    <div class="github-link-container">
+        <a href="#" id="repo-link" target="_blank">
+            <img id="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Link">
+            View on GitHub
+        </a>
+    </div>
+
+    <div class="description">
+        <p>Ripser++ utilizes the massive parallelism hidden in the computation of Vietoris-Rips persistence barcodes by taking mathematical and algorithmic opportunities we have identified. It can achieve up to 30x speedup over the total execution time of Ripser, up to 2.0x CPU memory efficiency and up to 1.58x reduction in the amount of memory used on GPU compared to that on CPU for Ripser.</p>
+        <p>After dimension 0 persistence computation, there are two stages of computation in the original Ripser: filtration construction with clearing followed by matrix reduction. Ripser++ massively parallelizes the filtration construction with clearing stage and extracts the hidden parallelism of finding "apparent pairs" from matrix reduction all on GPU, leaving the computation of submatrix reduction on the remaining nonapparent columns on CPU. By our empirical findings, up to 99.9% of the columns in a cleared coboundary matrix are apparent.</p>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <strong>Stars:</strong> <span id="star-count">Loading...</span>
+        </div>
+        <div class="info-card">
+            <strong>Forks:</strong> <span id="fork-count">Loading...</span>
+        </div>
+        <div class="info-card">
+            <strong>Watchers:</strong> <span id="watchers-count">Loading...</span>
+        </div>
+        <div class="info-card">
+            <strong>Last Commit Date:</strong> <span id="last-commit-date">Loading...</span>
+        </div>
+        <div class="info-card">
+            <strong>Open Pull Requests:</strong> <span id="pull-requests-count">Loading...</span>
+        </div>
+        <div class="info-card">
+            <strong>Branches:</strong> <span id="branches-count">Loading...</span>
+        </div>
+    </div>
+
+    <h3>Contributors:</h3>
+    <ul id="contributors-list"></ul>
+
+    <h3>Dependent Repos:</h3>
+    <ul id="dependent-repos-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <p>Ripser++ utilizes the massive parallelism hidden in the computation of Vietoris-Rips persistence barcodes by taking mathematical and algorithmic opportunities we have identified. It can achieve up to 30x speedup over the total execution time of Ripser, up to 2.0x CPU memory efficiency and up to 1.58x reduction in the amount of memory used on GPU compared to that on CPU for Ripser.</p>
+<p>After dimension 0 persistence computation, there are two stages of computation in the original Ripser: filtration construction with clearing followed by matrix reduction. Ripser++ massively parallelizes the filtration construction with clearing stage and extracts the hidden parallelism of finding "apparent pairs" from matrix reduction all on GPU, leaving the computation of submatrix reduction on the remaining nonapparent columns on CPU. By our empirical findings, up to 99.9% of the columns in a cleared coboundary matrix are apparent.</p> -->
