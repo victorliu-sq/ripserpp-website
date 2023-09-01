@@ -14,7 +14,7 @@ function fetchRepoData() {
         .then(data => {
             document.getElementById('star-count').innerText = data.stargazers_count;
             document.getElementById('fork-count').innerText = data.forks_count;
-            document.getElementById('watchers-count').innerText = data.watchers_count;
+            // document.getElementById('watchers-count').innerText = data.watchers_count;
             document.getElementById('last-commit-date').innerText = new Date(data.pushed_at).toLocaleDateString();
             document.getElementById('repo-link').setAttribute('href', data.html_url);
         })
